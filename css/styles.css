@@ -1349,15 +1349,17 @@ footer {
   align-items: center;
 }
 .map-canvas {
-  height: 250px;
-  background-color: #eee;
-  background-image: radial-gradient(#ccc 1px, transparent 1px), radial-gradient(#ccc 1px, transparent 1px);
-  background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  height: 350px;
+  background-color: #f8f9fa;
+  background-image: url('../images/india_map.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.9;
 }
 .map-marker {
   position: absolute;
