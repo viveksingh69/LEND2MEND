@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Corporate Identity â€” Sainifintech</title>
-  <meta name="description" content="Discover Saini Engg. & Finance Private Limited's journey since 1996. Our history, principles, pillars, and timeline of corporate governance in Kolkata.">
+  <title>Pay EMI â€” Sainifintech</title>
+  <meta name="description" content="Pay your EMI online with Saini Engg. & Finance Private Limited securely.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,450;9..144,560;9..144,650;9..144,720&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -61,74 +61,39 @@
 </header>
 
 <main id="top">
-  <!-- Inner Page Hero / Intro -->
+  <!-- Pay EMI Hero -->
   <section style="background: linear-gradient(160deg, var(--red-900) 0%, var(--red-700) 100%); color: var(--white); padding: 60px 0;">
     <div class="wrap">
-      <div class="eyebrow">Our Story</div>
-      <h1 style="color: var(--white); font-size: clamp(32px, 4vw, 48px); max-width: 25ch;">Nearly three decades of governance discipline.</h1>
+      <div class="eyebrow">Online Payment</div>
+      <h1 style="color: var(--white); font-size: clamp(32px, 4vw, 48px); max-width: 25ch;">Pay your EMI online</h1>
       <p style="color: rgba(255,255,255,0.85); font-size: 17px; margin-top: 14px; max-width: 60ch;">
-        Operating steadily from Kolkata since 1996, Sainifintech has built corporate advisory value across generations with transparency and stability.
+        Quick, secure, and hassle-free payment portal for our existing customers.
       </p>
     </div>
   </section>
 
-  <!-- Detailed Content Section -->
-  <section>
-    <div class="wrap about">
-      <div class="reveal">
-        <div class="section-head" style="margin-bottom:32px;">
-          <div class="eyebrow">Historical Timeline</div>
-          <h2>Our journey through the years</h2>
-        </div>
-        <div class="timeline">
-          <div class="tl-item">
-            <div class="yr">1996</div>
-            <h4>Incorporated in Kolkata</h4>
-            <p>Registered with the Registrar of Companies, Kolkata as a Private Limited Company. Granted NBFC CoR by RBI in 1999</p>
+  <!-- Payment Form -->
+  <section id="contact-info" style="padding: 60px 0;">
+    <div class="wrap" style="display: flex; justify-content: center;">
+      <!-- Form Card -->
+      <div class="form-card reveal" style="width: 100%; max-width: 600px;">
+        <h3>Payment Details</h3>
+        <p class="small">Please provide your loan information below.</p>
+        <form id="paymentForm" onsubmit="event.preventDefault(); alert('Redirecting to secure payment gateway...');">
+          <div class="form-row">
+            <label>Loan Account Number *</label>
+            <input type="text" placeholder="Enter your loan account number" required>
           </div>
-          <div class="tl-item">
-            <h4>Slender</h4>
+          <div class="form-row">
+            <label>Registered Mobile Number *</label>
+            <input type="tel" placeholder="10-digit mobile number" required>
           </div>
-          <div class="tl-item">
-            <div class="yr">2024</div>
-            <h4>Latest AGM held</h4>
-            <p>Annual General Meeting conducted on 30 September 2024, reaffirming board continuity.</p>
+          <div class="form-row">
+            <label>EMI Amount (â‚¹) *</label>
+            <input type="number" placeholder="Enter amount to pay" required min="1">
           </div>
-          <div class="tl-item">
-            <div class="yr">Ahead</div>
-            <h4>Digital &amp; lending-ready roadmap</h4>
-            <p>Preparing infrastructure for expanded financial products, pending applicable approvals.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="about-copy reveal">
-        <div class="section-head" style="margin-bottom:24px;">
-          <div class="eyebrow">Who we are</div>
-          <h2>An Indian Private Limited Company built for the long term.</h2>
-        </div>
-        <p class="lead-line">Building financial confidence through transparency, integrity and long-term value creation.</p>
-        <p>SAINI ENGG. &amp; FINANCE PRIVATE LIMITED was incorporated on 29 August 1996 and is registered with the Registrar of Companies, Kolkata. The company has operated for nearly three decades in business consulting, financial advisory and corporate services, guided by a small, stable board that has been in place since inception.</p>
-        <p>We are not currently a registered NBFC. Where this page refers to lending or investment-style products, they are marked clearly as <b>Upcoming Services</b> on our services page and will only be activated once the relevant regulatory approvals are in place.</p>
-        
-        <div class="pillars" style="margin-top: 40px;">
-          <div class="pillar">
-            <h4>Transparency</h4>
-            <p>Company facts are stated exactly as filed with the MCA â€” nothing inferred or inflated.</p>
-          </div>
-          <div class="pillar">
-            <h4>Integrity</h4>
-            <p>Every engagement is documented, disclosed, and free of hidden terms.</p>
-          </div>
-          <div class="pillar">
-            <h4>Continuity</h4>
-            <p>The same three directors have guided the company since its founding year.</p>
-          </div>
-          <div class="pillar">
-            <h4>Long-term value</h4>
-            <p>Decisions weighed for durability, not short-term optics.</p>
-          </div>
-        </div>
+          <button type="submit" id="payBtn" class="btn btn-primary form-submit">Proceed to Pay</button>
+        </form>
       </div>
     </div>
   </section>
