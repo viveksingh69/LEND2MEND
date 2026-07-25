@@ -62,7 +62,7 @@
 
 <main id="top">
   <!-- Pay EMI Hero -->
-  <section style="background: linear-gradient(160deg, var(--red-900) 0%, var(--red-700) 100%); color: var(--white); padding: 60px 0;">
+  <section style="background: linear-gradient(135deg, #4a0610 0%, var(--red-900) 50%, var(--red-700) 100%); color: var(--white); padding: 60px 0;">
     <div class="wrap">
       <div class="eyebrow">Online Payment</div>
       <h1 style="color: var(--white); font-size: clamp(32px, 4vw, 48px); max-width: 25ch;">Pay your EMI online</h1>
@@ -77,8 +77,11 @@
     <div class="wrap" style="display: flex; justify-content: center;">
       <!-- Form Card -->
       <div class="form-card reveal" style="width: 100%; max-width: 600px;">
-        <h3>Payment Details</h3>
-        <p class="small">Please provide your loan information below.</p>
+        <div style="margin-bottom: 20px;">
+          <h3>Payment Details</h3>
+          <p class="small">Please provide your loan information below.</p>
+        </div>
+        
         <form id="paymentForm" onsubmit="event.preventDefault(); alert('Redirecting to secure payment gateway...');">
           <div class="form-row">
             <label>Loan Account Number *</label>
@@ -89,42 +92,18 @@
             <input type="tel" placeholder="10-digit mobile number" required>
           </div>
           <div class="form-row">
-            <label>EMI Amount (â‚¹) *</label>
-            <input type="number" placeholder="Enter amount to pay" required min="1">
+            <label>EMI Amount (?) *</label>
+            <input type="number" id="emiAmountInput" placeholder="Enter amount to pay" required min="1">
+          </div>
+          <div style="text-align: center; margin: 30px 0;">
+            <p style="font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 12px;">Scan the QR & Pay EMI</p>
+            <div style="background: #fff; padding: 12px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: inline-block;">
+              <img id="upiQrCode" src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=upi://pay?pa=sainifintech@upi&pn=SainiFintech" alt="UPI QR Code" style="width: 140px; height: 140px; border-radius: 6px; display: block;">
+            </div>
           </div>
           <button type="submit" id="payBtn" class="btn btn-primary form-submit">Proceed to Pay</button>
         </form>
       </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="brand"><img src="images/logo.png?v=2" alt="Sainifintech Logo" style="height: 150px; width: auto; object-fit: contain; margin-top: -55px; margin-bottom: -55px;"></div>
-        <p>An Indian Private Limited Company, MCA-registered since 1996, building financial confidence in Kolkata and beyond.</p>
-      </div>
-      <div><h5>People</h5><ul>
-        <li><a href="corporate-identity.html">Corporate Identity</a></li>
-        <li><a href="management.html">Management</a></li>
-      </ul></div>
-      <div><h5>Products</h5><ul>
-        <li><a href="lend2mend.html">Lend2Mend</a></li>
-        <li><a href="ev-funding.html">EV Funding</a></li>
-        <li><a href="investors.html">Investor Relations</a></li>
-      </ul></div>
-      <div><h5>Company</h5><ul>
-        <li><a href="policies.html">Policies</a></li>
-        <li><span class="placeholder-tag">Privacy Policy â€” pending</span></li>
-        <li><span class="placeholder-tag">Terms of Use â€” pending</span></li>
-      </ul></div>
-      <div><h5>Contact</h5><ul>
-            <li></li>
-        <li><a href="mailto:accounthead@sainigroups.in">accounthead@sainigroups.in</a></li>
-        <li><a href="contact.html" style="line-height: 1.4; display: inline-block;">2/5, Sarat Bose Road, Sukhsagar Housing Society,<br>Block E-2, 2nd Floor, Flat 2B/1, L.R.Sarani,<br>Kolkata, West Bengal 700020</a></li>
-      </ul></div>
     </div>
     <div class="foot-bottom">
       <span>Â© 2026 Saini Engg. &amp; Finance Private Limited. All rights reserved.</span>
